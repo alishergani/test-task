@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import TreeItem from "./TreeItem";
+
 
 class Tree extends Component {
     state = {
@@ -54,7 +56,7 @@ class Tree extends Component {
     
     render() {
         const items = this.state.tree.map((item, i) =>
-            <p>{item.title}</p>
+            <TreeItem key={i} item={item}/>
         );
         return (
           <div className="Tree">
