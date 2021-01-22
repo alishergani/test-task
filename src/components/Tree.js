@@ -56,7 +56,7 @@ class Tree extends Component {
     
     render() {
         const items = this.state.tree.map((item, i) =>
-            <TreeItem key={i} item={item}/>
+            <TreeItem key={i} item={item} deep={1}/>
         );
         return (
           <div className="Tree">
